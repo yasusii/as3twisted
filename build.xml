@@ -2,7 +2,7 @@
 
   <property file="build.properties"/>
   <property name="srcdir" value="${basedir}/src/as3twisted"/>
-  <property name="swc_path" value="${basedir}/bin/as3twisted.swc"/>
+  <property name="swc_path" value="${basedir}/swc/as3twisted.swc"/>
   <property name="doc_title" value="Twisted for AS3"/>
 
   <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
