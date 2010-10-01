@@ -1,0 +1,30 @@
+as3twisted README
+=================
+
+as3twisted is a partial port of Twisted event-driven networking engine
+to ActionScript 3.  The original python version of this port is available at
+http://twistedmatrix.com/
+
+as3twisted is still under development. Send bug reports and feedback
+to http://github.com/yasusii/as3twisted/
+
+Copyright
+=========
+
+as3twisted is distributed under the terms of the MIT license.  The
+included LICENSE file describes this in detail.
+
+Warranty
+========
+
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+THE ENTIRE RISK AS TO THE USE OF THIS SOFTWARE IS WITH YOU.
+
+IN NO EVENT WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY
+MODIFY AND/OR REDISTRIBUTE THE LIBRARY, BE LIABLE TO YOU FOR ANY
+DAMAGES, EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+Again, see the included LICENSE file for specific legal details.
