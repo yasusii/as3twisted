@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+               creationComplete="runMe()">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+    <s:TextArea id="t" width="100%" height="100%"/>
+    <fx:Script>
+        <![CDATA[
+            import as3twisted.internet.defer.Deferred;
+            import flash.events.TimerEvent;
+            import flash.utils.Timer;
+            function runMe():void {
+                var d1:Deferred = new Deferred();
+                var d2:Deferred = new Deferred();
+                var a:Array = [d1, d2];
+                trace(a.indexOf(d2));
+                trace(a.indexOf(d1));
+                
+            }
+        ]]>
+    </fx:Script>
+</s:Application>

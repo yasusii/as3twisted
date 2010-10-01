@@ -1,0 +1,40 @@
+<project name="as3twisted builder" basedir="." default="buildAll">
+
+  <property file="build.properties"/>
+  <property name="srcdir" value="${basedir}/src/as3twisted"/>
+  <property name="swc_path" value="${basedir}/bin/as3twisted.swc"/>
+  <property name="doc_title" value="Twisted for AS3"/>
+
+  <taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+
+  <target name="buildAll">
+    <antcall target="buildSWC" description="build the SWC file"/>
+    <antcall target="cleanUpDocs" description="clean up the docs directory"/>
+    <antcall target="buildASDoc" description="build ASDoc files"/>
+  </target>
+
+  <target name="buildSWC">
+    <compc output="${swc_path}" debug="false">
+      <include-sources dir="${srcdir}" includes="**/*.as"/>
+    </compc>
+  </target>
+
+  <target name="cleanUpDocs">
+    <delete dir="${docdir}" failonerror="true" includeemptydirs="true"/>
+  </target>
+
+  <target name="buildASDoc">
+    <exec executable="${asdoc_cmd}" failonerror="true">
+      <arg value="-source-path"/>
+      <arg value="src"/>
+      <arg value="-doc-sources"/>
+      <arg value="${srcdir}"/>
+      <arg value="-window-title"/>
+      <arg value="'${doc_title}'"/>
+      <arg value="-output"/>
+      <arg value="${docdir}"/>
+    </exec>
+  </target>
+
+</project>
+
