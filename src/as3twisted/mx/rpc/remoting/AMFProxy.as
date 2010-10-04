@@ -29,7 +29,7 @@ public dynamic class AMFProxy extends Proxy {
         return this._callProperty(methodName, args);
     }
 
-    private function _callProperty(methodName:*, args:Array):* {
+    private function _callProperty(methodName:*, args:Array=null):* {
         var op:Operation = this.remoteObject[methodName];
         var token:AsyncToken = op.send.apply(null, args);
         var responder:DeferredResponder = new DeferredResponder();
